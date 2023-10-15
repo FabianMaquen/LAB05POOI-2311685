@@ -1,13 +1,13 @@
 package Uchill;
 
-public abstract class Persona {
+public class Persona {
     protected int ID;
     protected int dni;
     protected String nombres;
-    protected String  apellidos;
+    protected String apellidos;
     protected int edad;
-    protected String  correo;
-    protected int  telefono;
+    protected String correo;
+    protected int telefono;
 
     public Persona(){
     }
@@ -80,12 +80,13 @@ public abstract class Persona {
     }
 
     // ESTA ES LA CLASE ABSTRACTA QUE SERA DEFINIDA INDOVIDUALMENTE EN CASA UNA SE LAS SUBCLASES ESTUDIANTE, PROFESOR Y ADMINISTRADOR
-    public abstract void mandarCorreo();
+    public void mandarCorreo(){
+        System.out.println("Mensaje enviado a: " +this.getCorreo());
+    }
 
     @Override
     public String toString() {
-        return "ID = " + ID + ", dni=" + dni + ", nombres=" + nombres + ", apellidos=" + apellidos + ", edad=" + edad
-                + ", correo=" + correo + ", telefono=" + telefono + " ";
+        return "\n"+nombres + " "+ apellidos + "\nID: " + ID + "\nDni: " + dni + "\nEdad: " + edad + "\nCorreo: " + correo + "\nTelefono: " + telefono +"\n";
     }
 
 

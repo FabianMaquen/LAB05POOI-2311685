@@ -1,27 +1,23 @@
 package Uchill;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Ciclo {
-    private int nPeriodo;
-    private int anio;
-    private int cicloID;
-    private List<Cursos> listaCurso;
+  private int nPeriodo;
+  private int anio;
+  private int cicloID;
 
     public Ciclo(){
 
     }
 
-    public Ciclo(int nPeriodo, int anio, int cicloID, List<Curso> listaCurso) {
+    public Ciclo(int nPeriodo, int anio, int cicloID) {
         this.nPeriodo = nPeriodo;
         this.anio = anio;
         this.cicloID = cicloID;
-        this.listaCurso = listaCurso;
     }
     
     public int getNPeriodo() {
 		return nPeriodo;
-	}
+	  }
 
 	public void setNPeriodo(int nPeriodo) {
 		this.nPeriodo = nPeriodo;
@@ -43,8 +39,16 @@ public class Ciclo {
 		this.cicloID = cicloID;
     }
 
-    @Override
-    public String toString(){
-        return "Número de Periodo: " + nPeriodo + "- Año: " + anio + "- ID del ciclo: " + cicloID;
-    }
+  public int getnPeriodo() {
+    return nPeriodo;
+  }
+
+  public void setnPeriodo(int nPeriodo) {
+    this.nPeriodo = nPeriodo;
+  }
+
+  @Override
+  public String toString(){
+    return "Número de Periodo: " + nPeriodo + "- Año: " + anio + "- ID del ciclo: " + cicloID;
+  }
 }

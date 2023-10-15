@@ -4,13 +4,15 @@ public class Facultad {
 
 	private char pabellon;
 	private String nameFa;
+	private int facuID;
+	
 	
 	public Facultad() {
 		
 	}
-	
-	public Facultad(char pabellon, String nameFa) {
-		super();
+
+	public Facultad(int facuID, char pabellon, String nameFa){
+		this.facuID = facuID;
 		this.pabellon = pabellon;
 		this.nameFa = nameFa;
 	}
@@ -33,6 +35,7 @@ public class Facultad {
 
 	@Override
 	public String toString() {
-		return "Pabellon:" + pabellon + " - " + "Nombre de Facultad:" + " " + nameFa;
+		return "\nID de facultad: " + facuID + "\nPabellon: " + pabellon + "\nNombre de Facultad: " + nameFa + "\n";
+
 	}
 }
