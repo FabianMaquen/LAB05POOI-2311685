@@ -1,6 +1,7 @@
 package Uchill;
 
-public class Persona {
+public abstract class Persona {
+    protected int ID;
     protected int dni;
     protected String nombres;
     protected String  apellidos;
@@ -11,14 +12,24 @@ public class Persona {
     public Persona(){
     }
 
-    public Persona(int dni, String nombres, String apellidos, int edad, String correo, int telefono) {
+    public Persona(int ID, int dni, String nombres, String apellidos, int edad, String correo, int telefono) {
+        this.ID = ID;
         this.dni = dni;
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.edad = edad;
         this.correo = correo;
-        this.telefono = telefono;
+        this.telefono = telefono;   
     }
+    
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int iD) {
+        this.ID = iD;
+    }
+    
 
     public int getDni() {
         return dni;
@@ -68,19 +79,15 @@ public class Persona {
         this.telefono = telefono;
     }
 
-    public void mandarCorreo(String conf){
-        if (conf == "si" || conf == " SI") {
-            System.out.println("Enviando correo de: " + correo);
-        }else{
-            System.out.println(" ");
-        }
-    }
+    // ESTA ES LA CLASE ABSTRACTA QUE SERA DEFINIDA INDOVIDUALMENTE EN CASA UNA SE LAS SUBCLASES ESTUDIANTE, PROFESOR Y ADMINISTRADOR
+    public abstract void mandarCorreo();
 
     @Override
     public String toString() {
-        return "Personas [dni=" + dni + ", nombres=" + nombres + ", apellidos=" + apellidos + ", edad=" + edad
-                + ", correo=" + correo + ", telefono=" + telefono + "]";
+        return "ID = " + ID + ", dni=" + dni + ", nombres=" + nombres + ", apellidos=" + apellidos + ", edad=" + edad
+                + ", correo=" + correo + ", telefono=" + telefono + " ";
     }
-    
+
+
     
 }

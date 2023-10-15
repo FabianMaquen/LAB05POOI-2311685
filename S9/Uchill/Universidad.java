@@ -7,6 +7,7 @@ public class Universidad {
     private int sedes;
     private String ubicacion;
     private List<Persona> personas; // Lista para almacenar instancias de Persona
+    private List<Facultad> facultades;
     
     Universidad(){
 
@@ -41,7 +42,12 @@ public class Universidad {
     public void setPersonas(List<Persona> personas) {
         this.personas = personas;
     }
-
+    public List<Facultad> getFacultades() {
+        return facultades;
+    }
+    public void setFacultades(List<Facultad> facultades) {
+        this.facultades = facultades;
+    }
     public void agregarPersona(Persona persona){
         personas.add(persona);
     }

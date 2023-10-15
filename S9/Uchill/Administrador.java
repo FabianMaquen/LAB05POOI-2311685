@@ -11,8 +11,8 @@ public class Administrador extends Persona {
 	    this.rango = rango;
 	    this.nOficina = nOficina;
     }
-    public Administrador(int dni, String nombres, String apellidos, int edad, String correo, int telefono,String rango, int nOficina) {
-	    super(dni, nombres, apellidos,edad, correo,telefono);
+    public Administrador(int ID,int dni, String nombres, String apellidos, int edad, String correo, int telefono,String rango, int nOficina) {
+	    super(ID,dni, nombres, apellidos,edad, correo,telefono);
 	    this.rango = rango;
 	    this.nOficina = nOficina;
     }
@@ -36,7 +36,17 @@ public class Administrador extends Persona {
             System.out.println("No se programo una reunión para hoy");
         }
     }
+    public void mandarCorreo() {
+		System.out.println("Mandando correo a coordinador");
+	}
     public String toString () {
         return "Administrador[Rango="+rango+",Numero de oficinas ="+nOficina+super.toString()+"]";
     }
+    
+    public static void main(String[] args) {
+		Administrador administrador = new Administrador(499308293,8723623,"Javier","Gamarra",53, "dfdgrgv@.com",94477724,"Director", 5);
+		
+		System.out.println(administrador.toString());
+		administrador.programarReunión("SI");
+	}
 }
