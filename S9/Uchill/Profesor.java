@@ -57,32 +57,4 @@ public class Profesor extends Persona{
 	public String toString () {
 		return "Horas trabajadas: "+ numHoras+ "\nAños de experiencia: "+ aniosExperiencia + super.toString();
 		}
-	
-        public static void main(String[] args) {
-        	
-        	Profesor profesor1 = new Profesor(247837483,74627362,"Carlos","Bravo",40, "dfefddQQ@5565",999999999, 10,9);
-            
-
-            Curso curso1 = new Curso ("Calculo","FEFRGW",4);
-            Curso curso2 = new Curso ("Algebra Lineal","WRERT3T",3);
-            Curso curso3 = new Curso("Calculo 2","ERETRGSG",4);
-            Curso curso4 = new Curso("Calculo 3","ERT3ETR",4);
-            
-            
-
-            profesor1.asignarCurso(curso1);
-            profesor1.asignarCurso(curso2);
-            profesor1.asignarCurso(curso3);
-            profesor1.asignarCurso(curso4);
-            
-            System.out.println(profesor1.toString());
-            
-            System.out.println("Profesor " + profesor1.getNombres() + " "+profesor1.getApellidos() +": " +"\nCursos dictados:");
-            for (Curso curso : profesor1.getCursos()){
-                System.out.println("\nCurso:"+curso.getNombre() + "\nCodigo de curso: "+ curso.getCodigo()+"\nCreditos del curso: "+ curso.getCreditos());
-            }
-            
-            System.out.println("El salario de hoy es "+profesor1.calcSalarioDiario(8));
-        }
-	
 	}

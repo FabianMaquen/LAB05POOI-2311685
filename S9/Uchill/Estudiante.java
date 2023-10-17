@@ -61,30 +61,4 @@ public class Estudiante extends Persona {
     public String toString() {
         return "\nESTUDIANTE: " + super.toString() + "Carnet: " + carnet + "\nCiclo: " + ciclo + "\n";
     }  
-
-    public static void main(String[] args) {
-        Curso curso1 = new Curso("MATEMATICAS", "123ABC", 20, 20,20,20,20);
-        Curso curso2 = new Curso("POO1", "456DEF", 5, 20,20,18,19);
-        Curso curso3 = new Curso("LENGUAJE", "789GHI", 4, 20,19,17,20);
-
-
-        Estudiante estudiante1 = new Estudiante(151652, 2786347, "Pochita", "Quevedo", 20, "Pochitatuterror@gmail.com", 123456789, 123456, 02);
-
-
-        estudiante1.agregarCurso(curso1);
-        estudiante1.agregarCurso(curso2);
-        estudiante1.agregarCurso(curso3);
-        
-        System.out.println(estudiante1.toString());
-
-        estudiante1.asistencia("si");
-
-
-        System.out.println("Los cursos de " + estudiante1.getNombres() + ": ");
-        
-        for (Curso curso : estudiante1.getCursos()){
-            System.out.println(curso.getNombre() + "    /   Promedio: " + curso.calcularPromedio());
-        }
-
-    }
 }
