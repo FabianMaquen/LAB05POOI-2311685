@@ -64,8 +64,8 @@ public class Universidad {
 
     public static void main(String[] args) {
 
-        Persona persona1 = new Persona(15198, 2385515, "Juan", "Pérez", 18,"beba@usil", 9485112);
-        Persona persona2 = new Persona(5121, 1521062, "María", "Rodríguez", 20, "FEAFSCZ@usil", 9958151);
+        Estudiante persona1 = new Estudiante(151652, 2786347, "Pochita", "Quevedo", 20, "Pochitatuterror@gmail.com", 123456789, 123456, 02);
+        Estudiante persona2 = new Estudiante(534215, 126534, "Cristiano", "Quevedo", 22, "Cristianotuterror@gmail.com", 51325456, 56652, 05);
 
         List<Persona> personas = new ArrayList<>();
         personas.add(persona1);
